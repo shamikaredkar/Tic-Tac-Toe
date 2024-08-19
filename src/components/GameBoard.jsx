@@ -1,13 +1,7 @@
 import { React } from "react";
 import Player from "./Player";
 
-const initialGameBoard = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-];
-
-export default function GameBoard({ onSelectSquare, turns }) {
+export default function GameBoard({ onSelectSquare, board }) {
   //   const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
   //   /*
@@ -28,12 +22,6 @@ export default function GameBoard({ onSelectSquare, turns }) {
   //   }
 
   //gameBoard is a computed value derived from a state
-  let gameBoard = initialGameBoard;
-  for (const turn of turns) {
-    const { square, player } = turn;
-    const { row, col } = square;
-    gameBoard[row][col] = player;
-  }
 
   /*  
    1. row represents the current row in iteration eg.(row, row, row)
@@ -45,7 +33,7 @@ export default function GameBoard({ onSelectSquare, turns }) {
 
   return (
     <ol id='game-board'>
-      {gameBoard.map((row, rowIndex) => (
+      {board.map((row, rowIndex) => (
         <li key={rowIndex}>
           <ol>
             {row.map((playerSymbol, colIndex) => (
