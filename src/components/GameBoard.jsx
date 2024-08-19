@@ -1,4 +1,5 @@
 import { React } from "react";
+import Player from "./Player";
 
 const initialGameBoard = [
   [null, null, null],
@@ -49,7 +50,10 @@ export default function GameBoard({ onSelectSquare, turns }) {
           <ol>
             {row.map((playerSymbol, colIndex) => (
               <li key={colIndex}>
-                <button onClick={() => onSelectSquare(rowIndex, colIndex)}>
+                <button
+                  onClick={() => onSelectSquare(rowIndex, colIndex)}
+                  disabled={playerSymbol !== null}
+                >
                   {playerSymbol}
                 </button>
               </li>
