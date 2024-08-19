@@ -95,9 +95,19 @@ function App() {
     });
   }
   return (
-    <main>
-      <div id='game-container'>
-        {/*PLAYERS*/}
+    <main
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        gap: "20px",
+      }}
+    >
+      <div
+        id='game-container'
+        style={{ flex: "2", display: "flex", flexDirection: "column" }}
+      >
+        {/* PLAYERS */}
         <ol id='players' className='highlight-player'>
           <Player
             name={players.X}
@@ -112,12 +122,25 @@ function App() {
             onChangeName={handlePlayerNameChange}
           />
         </ol>
+        {/* GAME BOARD */}
+        <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
+        {/* GAME OVER MESSAGE */}
         {(winner || hasDraw) && (
           <GameOver winner={winner} onRestart={handleRestart} />
         )}
-        <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
       </div>
-      <Log turns={gameTurn} players={players} />
+
+      <div
+        style={{
+          flex: "1",
+          maxWidth: "300px",
+          marginTop: "10px",
+          marginRight: "auto",
+        }}
+      >
+        {/* LOG */}
+        <Log turns={gameTurn} players={players} />
+      </div>
     </main>
   );
 }
