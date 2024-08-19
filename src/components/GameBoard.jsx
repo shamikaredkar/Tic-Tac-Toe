@@ -9,6 +9,12 @@ const initialGameBoard = [
 export default function GameBoard() {
   const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
+  /*  
+   2. rowIndex represents the index of the row in which the cell was clicked
+   4. colIndex represents the index of the column in which the cell was clicked
+   5. Enter array one, iterate through all columns of row 1 then row 2 then row 3 
+   */
+
   function handleSelectButton(rowIndex, colIndex) {
     setGameBoard((prevGameBoard) => {
       const updatedBoard = [
@@ -18,6 +24,15 @@ export default function GameBoard() {
       return updatedBoard;
     });
   }
+
+  /*  
+   1. row represents the current row in iteration eg.(row, row, row)
+   2. rowIndex represents the index of the current row eg. 0,1,2
+   3. playerSymbol represents the value in current cell eg. null, X, O
+   4. colIndex represents the index of the current column 0, 1, 2
+   5. Enter array one, iterate through all columns of row 1 then row 2 then row 3 
+   */
+
   return (
     <ol id='game-board'>
       {gameBoard.map((row, rowIndex) => (

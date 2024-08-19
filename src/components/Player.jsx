@@ -19,13 +19,10 @@ export default function Player({ name, symbol }) {
 
   return (
     <li>
+      <button onClick={handleEditClick}>{!isEditing ? "Edit" : "Save"}</button>
       <span className='player'>
-        {!isEditing ? displayName : input}
+        {!isEditing ? displayName : input} :
         <span className='player-symbol'>{symbol}</span>
-        <button onClick={handleEditClick}>
-          {!isEditing ? "Edit" : "Save"}
-        </button>
-        ;
       </span>
     </li>
   );
