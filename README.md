@@ -1,8 +1,9 @@
 <div align="center"><h2>TicTacToe Game - <a href="https://tic-tac-toe-shamikaredkar.vercel.app/"> Demo</a></h2></div>
 
-<div align="center">
-<img src="https://github.com/shamikaredkar/Tic-Tac-Toe/blob/main/Tic-Tac-Toe.gif"/>
-</div>
+
+https://github.com/user-attachments/assets/fd8155b0-f633-4671-9c0e-99aeb371818f
+
+
 
 ## Overview
 
