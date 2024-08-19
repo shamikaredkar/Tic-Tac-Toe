@@ -1,5 +1,9 @@
 <div align="center"><h2>TicTacToe Game - <a href="https://tic-tac-toe-shamikaredkar.vercel.app/"> Demo</a></h2></div>
 
+<div align="center">
+<img src="https://github.com/shamikaredkar/Tic-Tac-Toe/blob/main/Tic-Tac-Toe.gif"/>
+</div>
+
 ## Overview
 
 This is a simple yet engaging implementation of the classic Tic-Tac-Toe game built using React. The game allows two players to compete against each other, with the app tracking the game state and determining the winner. It includes features like tracking player moves, displaying the game board, and showing the winner or draw status.
